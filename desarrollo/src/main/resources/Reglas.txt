@@ -1,6 +1,6 @@
 Z & L -> S
 A & N -> E
-D | 0 -> Z
+D | M -> Z
 A -> M
 Q & !W & !Z -> N
 L & M -> E

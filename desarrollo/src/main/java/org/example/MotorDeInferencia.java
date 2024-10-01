@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MotorDeInferencia {
-    private List<Regla> reglas;
-    private List<String> hechos;
+    private final List<Regla> reglas;
+    private final List<String> hechos;
 
     public MotorDeInferencia() {
         this.hechos = new ArrayList<String>();

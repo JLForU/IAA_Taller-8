@@ -3,8 +3,8 @@ package org.example;
 import java.util.List;
 
 public class Regla {
-    private String expresion; // expresion completa de la regla
-    private String conclusion; // conclusion de la regla
+    private final String expresion; // expresion completa de la regla
+    private final String conclusion; // conclusion de la regla
 
     public Regla(String expresion, String conclusion) {
         this.expresion = expresion;
@@ -20,7 +20,7 @@ public class Regla {
     }
 
     private boolean evaluarExpresion(String expresion, List<String> hechos) {
-        String[] orCondiciones = expresion.split("\\|\\|");
+        String[] orCondiciones = expresion.split("\\|");
         for (String orCondicion : orCondiciones) {
             if (evaluarCondicionesAnd(orCondicion.trim(), hechos)) {
                 return true;
@@ -36,7 +36,7 @@ public class Regla {
             boolean negado = false;
             if (condicion.startsWith("!")) {
                 negado = true;
-                condicion = condicion.substring(1).trim(); // Corregido aquí
+                condicion = condicion.substring(1).trim();
             }
             if ((negado && hechos.contains(condicion)) || (!negado && !hechos.contains(condicion))) {
                 return false;

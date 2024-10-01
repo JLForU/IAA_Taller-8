@@ -13,12 +13,12 @@ public class Main {
         String classPath = String.valueOf(Main.class.getClassLoader().getResource(""));
         classPath = classPath.replace("file:", "").replace("\\", "/");
 
-        /*
         String factsFilePath = classPath + "Hechos.txt";
         String rulesFilePath = classPath + "Reglas.txt";
-        */
+        /*
         String factsFilePath = classPath + "pruebaHechos.txt";
         String rulesFilePath = classPath + "pruebaReglas.txt";
+        */
 
         cargarReglas(rulesFilePath, motor);
         cargarHechos(factsFilePath, motor);
