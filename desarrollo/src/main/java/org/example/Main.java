@@ -24,6 +24,10 @@ public class Main {
         cargarHechos(factsFilePath, motor);
         motor.encadenar();
 
+        //// Prueba de backtracking.
+        MotorDeInferencia motorsito = new MotorDeInferencia();
+        motorsito.retroceder("E"); // Intenta deducir "E" usando backtracking
+
     }
 
     private static void cargarReglas(String archivo, MotorDeInferencia motor) {
