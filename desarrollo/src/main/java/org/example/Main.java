@@ -1,10 +1,8 @@
 package org.example;
 
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.Objects;
 
 public class Main {
 
@@ -15,7 +13,10 @@ public class Main {
         String classPath = String.valueOf(Main.class.getClassLoader().getResource(""));
         classPath = classPath.replace("file:", "").replace("\\", "/");
 
-        // Construct the generalized paths for rules and facts files
+        /*
+        String factsFilePath = classPath + "Hechos.txt";
+        String rulesFilePath = classPath + "Reglas.txt";
+        */
         String factsFilePath = classPath + "pruebaHechos.txt";
         String rulesFilePath = classPath + "pruebaReglas.txt";
 
