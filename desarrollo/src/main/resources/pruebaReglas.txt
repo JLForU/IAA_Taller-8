@@ -1,0 +1,3 @@
+Temperature_is_less_than_20 & There_is_humidity_in_the_air -> There_are_chances_of_rain
+Sun_is_behind_clouds & Air_is_very_cool -> Temperature_is_less_than_20
+Air_is_very_heavy -> There_is_humidity_in_the_air
